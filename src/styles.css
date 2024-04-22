@@ -1,0 +1,98 @@
+@keyframes hideNav {
+  0% {
+    top: 0px;
+  }
+
+  80% {
+    top: -70px;
+  }
+
+  100% {
+    top: -80px;
+  }
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+nav {
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 5px solid rgb(9, 0, 114);
+}
+
+nav ul {
+  padding: 0px;
+  list-style: none;
+  display: inline;
+}
+
+li {
+  display: inline;
+  font-size: 20px;
+}
+
+.logo {
+  margin-top: auto;
+  width: 80px;
+}
+
+nav .gray-container {
+  display: flex;
+  padding: 15px 10px 5px;
+
+  margin: 0px;
+}
+
+.nav-container {
+  width: 100%;
+  position: fixed;
+}
+
+.nav-container button {
+  border: 0px;
+  background-color: transparent;
+}
+
+.nav-container button {
+  transition: all 200ms ease-in-out;
+}
+
+.nav-container i {
+  font-size: 25px;
+}
+
+.hint-text {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.nav-container.hide-bar button {
+  transform: rotateX(180deg);
+}
+
+.toggle-nav {
+  display: block;
+  margin: 0 auto;
+}
+
+.hide-bar {
+  animation: 1s hideNav both;
+}
+
+.roboto-mono {
+  font-family: "Roboto mono", Arial, Helvetica, sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.gray-container {
+  background-color: rgba(185, 185, 185, 0.8);
+}
