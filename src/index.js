@@ -13,4 +13,5 @@ function hideHintText() {
 
 let hintText = document.querySelector("#hint-navbar");
 
-setTimeout(hideHintText, 5000);
+setTimeout(hideHintText, 2000);
+setTimeout(toggleNavbar, 2000);
