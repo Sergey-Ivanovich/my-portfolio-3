@@ -4,11 +4,11 @@
   }
 
   80% {
-    top: -70px;
+    top: -68px;
   }
 
   100% {
-    top: -80px;
+    top: -78px;
   }
 }
 
@@ -22,19 +22,30 @@ body {
 }
 
 nav {
+  color: rgb(9, 0, 114);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 5px solid rgb(9, 0, 114);
+}
+
+nav h3 {
+  vertical-align: middle;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 nav ul {
   padding: 0px;
   list-style: none;
   display: inline;
+  margin: auto;
 }
 
 li {
+  font-weight: bold;
   display: inline;
-  font-size: 20px;
+  font-size: 16px;
+  margin: auto;
 }
 
 .logo {
@@ -44,7 +55,7 @@ li {
 
 nav .gray-container {
   display: flex;
-  padding: 15px 10px 5px;
+  padding: 15px;
 
   margin: 0px;
 }
@@ -52,6 +63,12 @@ nav .gray-container {
 .nav-container {
   width: 100%;
   position: fixed;
+}
+
+.internav-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-container button {
@@ -64,7 +81,6 @@ nav .gray-container {
 }
 
 .nav-container i {
-  -webkit-backdrop-filter: blur(2px);
   font-size: 25px;
   color: rgba(0, 0, 0, 1);
   transition: all 150ms ease-in-out;
@@ -101,5 +117,7 @@ nav .gray-container {
 }
 
 .gray-container {
+  border-radius: 0px 15px 15px 0px;
+
   background-color: rgba(185, 185, 185, 0.8);
 }
