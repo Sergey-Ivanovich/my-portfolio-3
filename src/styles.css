@@ -39,6 +39,10 @@ nav {
   border-bottom: 5px solid rgb(9, 0, 114);
 }
 
+.lay-beneath {
+  z-index: 9;
+}
+
 nav h3 {
   vertical-align: middle;
   margin: auto;
@@ -72,6 +76,7 @@ nav .gray-container {
 }
 
 .nav-container {
+  z-index: 9999;
   width: 100%;
   position: fixed;
 }
