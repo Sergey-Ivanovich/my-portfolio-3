@@ -141,7 +141,6 @@ nav .gray-container {
 }
 
 header {
-  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   padding: 240px 70px;
@@ -163,7 +162,7 @@ header .img-container {
   border: 5px solid #808080;
   border-right: 0;
   display: block;
-  margin-top: -100px;
+  margin-top: -140px;
   margin-right: -70px;
   border-radius: 300px 0px 0px 300px;
   padding: 250px 300px;
