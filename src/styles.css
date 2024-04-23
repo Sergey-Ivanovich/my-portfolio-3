@@ -119,3 +119,15 @@ nav .gray-container {
   border-radius: 0px 15px 15px 0px;
   background-color: rgba(185, 185, 185, 0.5);
 }
+
+header {
+  padding: 240px 70px;
+}
+
+header h1 {
+  font-size: 80px;
+}
+
+header h2 {
+  font-size: 60px;
+}
