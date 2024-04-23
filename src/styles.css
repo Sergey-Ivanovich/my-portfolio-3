@@ -24,6 +24,17 @@
   }
 }
 
+@keyframes hideHeader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: 10000px;
+  }
+}
+
 html {
   overscroll-behavior: none;
 }
@@ -128,6 +139,10 @@ nav .gray-container {
 
 .float-in-top {
   animation: 2s float-in-top both;
+}
+
+.animated-hide {
+  animation: 0.5s hideHeader both;
 }
 
 /* animations end */
