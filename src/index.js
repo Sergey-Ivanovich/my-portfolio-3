@@ -1,6 +1,22 @@
+// \/ navbar
+
+function toggleNavbar() {
+  nav.classList.toggle("hide-bar");
+}
+
+function hideHintText() {
+  hintText.classList.add("hide");
+}
+
+let hintText = document.querySelector("#hint-navbar");
 let navToggle = document.querySelector(".toggle-nav");
 let nav = document.querySelector(".nav-container");
-let headerTypewriter = document.querySelector("#type-writer-header");
+navToggle.addEventListener("click", toggleNavbar);
+
+setTimeout(hideHintText, 2000);
+setTimeout(toggleNavbar, 2000);
+
+// \/ header
 
 function typeWriteHeading() {
   new Typewriter("#type-writer-header", {
@@ -10,18 +26,20 @@ function typeWriteHeading() {
   });
 }
 
-function toggleNavbar() {
-  nav.classList.toggle("hide-bar");
+function displayHeaderText1() {
+  headerText1.classList.add("float-in-top");
 }
 
-navToggle.addEventListener("click", toggleNavbar);
-
-function hideHintText() {
-  hintText.classList.add("hide");
+function displayHeaderText2() {
+  headerText2.classList.add("float-in-top");
 }
 
-let hintText = document.querySelector("#hint-navbar");
+let headerTypewriter = document.querySelector("#type-writer-header");
+let headerText1 = document.querySelector("#header-text-1");
+let headerText2 = document.querySelector("#header-text-2");
 
-setTimeout(hideHintText, 2000);
-setTimeout(toggleNavbar, 2000);
-setTimeout(typeWriteHeading, 500);
+let headerElement = document.querySelector(".header");
+
+setTimeout(typeWriteHeading, 1000);
+setTimeout(displayHeaderText1, 200);
+setTimeout(displayHeaderText2, 500);
