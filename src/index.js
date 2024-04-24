@@ -13,8 +13,8 @@ let navToggle = document.querySelector(".toggle-nav");
 let nav = document.querySelector(".nav-container");
 navToggle.addEventListener("click", toggleNavbar);
 
-setTimeout(hideHintText, 2000);
-setTimeout(toggleNavbar, 2000);
+setTimeout(hideHintText, 2500);
+setTimeout(toggleNavbar, 100);
 
 // \/ header
 
