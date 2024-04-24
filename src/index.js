@@ -1,18 +1,3 @@
-// \/ Scroll Clock
-
-function updateScroll() {
-  scrollQuantity = window.scrollY;
-  console.log(scrollQuantity);
-  updateScrollDependencies();
-}
-
-function updateScrollDependencies() {
-  hideHeader();
-}
-
-window.addEventListener("scroll", updateScroll);
-let scrollQuantity = 0;
-
 // \/ navbar
 
 function toggleNavbar() {
@@ -47,15 +32,6 @@ function displayHeaderText1() {
 
 function displayHeaderText2() {
   headerText2.classList.add("float-in-top");
-}
-
-function hideHeader() {
-  if (scrollQuantity > 100) {
-    headerElement.classList.add("animated-hide");
-  }
-  if (scrollQuantity < 100) {
-    headerElement.classList.remove("animated-hide");
-  }
 }
 
 let headerTypewriter = document.querySelector("#type-writer-header");
