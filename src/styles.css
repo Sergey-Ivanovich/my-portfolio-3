@@ -10,6 +10,12 @@
   }
 }
 
+@keyframes scroll-indicate {
+  to {
+    scale: 1 1;
+  }
+}
+
 html {
   overscroll-behavior: none;
 }
@@ -90,11 +96,23 @@ nav .mobile-nav li {
 }
 
 .nav-container {
-  transform: translateY(-78px);
+  transform: translateY(-72px);
   z-index: 9999;
   width: 100%;
   position: fixed;
   transition: all 0.2s ease-in-out;
+}
+
+.scroll-position-indicator {
+  scale: 0 1;
+  background-color: rgb(0, 255, 0);
+  height: 5px;
+  width: 100%;
+
+  animation: scroll-indicate linear;
+  transform-origin: left;
+  position: absolute;
+  animation-timeline: scroll(Y);
 }
 
 .internav-container {
