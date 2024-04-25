@@ -222,7 +222,7 @@ header .img-container {
 
 @media (max-width: 992px) {
   .nav-container {
-    transform: translateY(-215px);
+    transform: translateY(-213px);
   }
 
   .hide-bar {
