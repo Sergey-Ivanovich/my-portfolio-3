@@ -41,5 +41,5 @@ let headerText2 = document.querySelector("#header-text-2");
 let headerElement = document.querySelector(".header");
 
 setTimeout(typeWriteHeading, 1000);
-setTimeout(displayHeaderText1, 200);
-setTimeout(displayHeaderText2, 500);
+setTimeout(displayHeaderText1, 500);
+setTimeout(displayHeaderText2, 200);

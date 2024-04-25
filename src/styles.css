@@ -51,6 +51,19 @@ li {
   margin: auto;
 }
 
+nav a {
+  color: rgb(9, 0, 114);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: overline;
+}
+
+nav a.current-page {
+  border-top: 2px solid rgb(9, 0, 114);
+}
+
 .logo {
   margin: auto 10px;
   width: 80px;
@@ -60,6 +73,20 @@ nav .gray-container {
   display: inline;
   padding: 15px;
   margin: 0px;
+}
+
+nav .mobile-nav {
+  border-bottom: 1px solid black;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  background-color: white;
+}
+
+nav .mobile-nav li {
+  padding-left: 20px;
+  display: block;
+  text-transform: capitalize;
+  line-height: 1.9em;
 }
 
 .nav-container {
@@ -176,6 +203,18 @@ header .img-container {
 }
 
 @media (max-width: 992px) {
+  .nav-container {
+    transform: translateY(-215px);
+  }
+
+  .hide-bar {
+    transform: translateY(0px);
+  }
+
+  .gray-container {
+    border-radius: 0px;
+  }
+
   header {
     padding: 50px 0px 0px;
     display: block;
