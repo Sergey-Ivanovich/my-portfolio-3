@@ -37,6 +37,12 @@
   }
 }
 
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes turn-black {
   to {
     background-color: black;
@@ -293,7 +299,7 @@ header .img-container {
   }
 
   header {
-    padding: 50px 0px 0px;
+    padding: 120px 0px 0px;
     display: block;
     text-align: center;
   }

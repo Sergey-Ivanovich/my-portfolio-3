@@ -55,3 +55,13 @@ setTimeout(displayHeaderText2, 200);
 let page = document.querySelector("body");
 
 setTimeout(changeBackground, 1);*/
+
+//main below
+
+function testwrite() {
+  new Typewriter("#type-writer-main-top", {
+    strings: "Self-T",
+    autoStart: true,
+    delay: 50,
+  });
+}
