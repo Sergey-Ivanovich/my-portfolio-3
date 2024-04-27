@@ -17,12 +17,34 @@
 }
 
 @keyframes displace-right {
+  20% {
+    opacity: 0;
+  }
+
   to {
-    transform: translateX(500px);
+    transform: translateX(600px) translateY(100px);
+    opacity: 0;
+  }
+}
+@keyframes displace-left {
+  20% {
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-600px) translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes turn-black {
+  to {
+    background-color: black;
   }
 }
 
 html {
+  overflow-x: hidden;
   overscroll-behavior: none;
 }
 
@@ -30,6 +52,22 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   margin: 0px;
   transition: all 150ms ease-in-out;
+}
+
+section.blackground {
+  width: 100%;
+  background-color: transparent;
+  height: 1000px;
+  animation: turn-black linear both;
+  animation-timeline: view();
+  animation-range: contain 100px;
+}
+
+.black-background {
+  background-color: black;
+  color: rgb(60, 255, 0);
+  font-size: 100px;
+  height: 1000px;
 }
 
 nav {
@@ -143,14 +181,14 @@ nav .mobile-nav li {
 
 .nav-container.hide-bar i {
   transform: rotateX(180deg);
-  color: rgba(0, 0, 0, 1);
+
   transition: all 150ms ease-in-out;
 }
 
 .nav-container i {
   transform: rotateX(180deg);
-  font-size: 25px;
   color: rgb(131, 131, 131);
+  font-size: 25px;
 }
 
 .hint-text {
@@ -198,6 +236,12 @@ header {
   padding: 240px 70px;
 }
 
+header .greeting {
+  animation: displace-left linear;
+  animation-timeline: view();
+  animation-range: exit -140px;
+}
+
 header h1 {
   position: relative;
   opacity: 0;
@@ -210,17 +254,13 @@ header h2 {
   font-size: 60px;
 }
 
-header .img-master {
-  overflow: hidden;
+header .img-container {
   margin-top: -140px;
   margin-right: -70px;
-}
-
-header .img-container {
+  display: block;
   border: 5px solid #808080;
   border-right: 0;
-  display: block;
-
+  transform: translateX(0px);
   border-radius: 300px 0px 0px 300px;
   padding: 250px 300px;
   background-color: #d9d9d9;

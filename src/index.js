@@ -44,7 +44,7 @@ setTimeout(typeWriteHeading, 1000);
 setTimeout(displayHeaderText1, 500);
 setTimeout(displayHeaderText2, 200);
 
-function changeBackground() {
+/*function changeBackground() {
   if (page.classList.contains("blackground")) {
     page.classList.remove("blackground");
   } else {
@@ -54,4 +54,4 @@ function changeBackground() {
 
 let page = document.querySelector("body");
 
-setTimeout(changeBackground, 10);
+setTimeout(changeBackground, 1);*/
