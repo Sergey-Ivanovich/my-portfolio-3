@@ -58,7 +58,10 @@ setTimeout(changeBackground, 1);*/
 
 //main below
 
-function testwrite() {
+let typewrited = false;
+
+function descWrite() {
+  typewrited = true;
   new Typewriter("#type-writer-main-top", {
     strings: "What do I do?",
     autoStart: true,
@@ -67,9 +70,18 @@ function testwrite() {
 }
 
 function detectScroll() {
-  if (window.scrollY < 300) {
-    testwrite();
+  if (window.scrollY > 300 && typewrited === false) {
+    descWrite();
+  }
+
+  if (window.scrollY > 600) {
+    roleWrite();
   }
 }
 
-setInterval(detectScroll, 1);
+function roleWrite() {
+  roleElement.classList.add("cool-display");
+}
+
+let roleElement = document.querySelector("#job-role");
+setInterval(detectScroll, 100);

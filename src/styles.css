@@ -49,6 +49,19 @@
   }
 }
 
+@keyframes change-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 html {
   overflow-x: hidden;
   overscroll-behavior: none;
@@ -69,11 +82,21 @@ section.blackground {
   animation-range: contain 100px;
 }
 
+.cool-display {
+  background: linear-gradient(45deg, #000000, #00ff2f, #00ffb3, #0011cf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: change-gradient 5s infinite both;
+  background-size: 600% 600%;
+  opacity: 1;
+}
+
 .black-background {
+  padding-left: 100px;
   background-color: black;
   color: rgb(60, 255, 0);
   font-size: 100px;
-  height: 1000px;
+  height: 1500px;
 }
 
 nav {
@@ -287,12 +310,22 @@ header .img-container {
 
 main .job-description {
   font-size: 40px;
-  padding-left: 100px;
 }
 
-.stick-top {
+.stick {
   position: sticky;
   top: 60px;
+}
+
+main h2 {
+  color: white;
+  opacity: 0;
+  font-size: 70px;
+}
+
+main h2.stick {
+  top: 180px;
+  transition: all 200ms ease-in-out;
 }
 
 @media (max-width: 992px) {
