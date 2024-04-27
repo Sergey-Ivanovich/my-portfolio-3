@@ -285,6 +285,16 @@ header .img-container {
   border-radius: 500px;
 }
 
+main .job-description {
+  font-size: 40px;
+  padding-left: 100px;
+}
+
+.stick-top {
+  position: sticky;
+  top: 60px;
+}
+
 @media (max-width: 992px) {
   .nav-container {
     transform: translateY(-216px);

@@ -60,8 +60,16 @@ setTimeout(changeBackground, 1);*/
 
 function testwrite() {
   new Typewriter("#type-writer-main-top", {
-    strings: "Self-T",
+    strings: "What do I do?",
     autoStart: true,
     delay: 50,
   });
 }
+
+function detectScroll() {
+  if (window.scrollY < 300) {
+    testwrite();
+  }
+}
+
+setInterval(detectScroll, 1);
