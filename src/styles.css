@@ -16,6 +16,12 @@
   }
 }
 
+@keyframes displace-right {
+  to {
+    transform: translateX(500px);
+  }
+}
+
 html {
   overscroll-behavior: none;
 }
@@ -23,6 +29,7 @@ html {
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   margin: 0px;
+  transition: all 150ms ease-in-out;
 }
 
 nav {
@@ -34,6 +41,10 @@ nav {
 
 .lay-beneath {
   z-index: 9;
+}
+
+.blackground {
+  background-color: black;
 }
 
 nav h3 {
@@ -96,7 +107,7 @@ nav .mobile-nav li {
 }
 
 .nav-container {
-  transform: translateY(-72px);
+  transform: translateY(-77px);
   z-index: 9999;
   width: 100%;
   position: fixed;
@@ -199,15 +210,23 @@ header h2 {
   font-size: 60px;
 }
 
+header .img-master {
+  overflow: hidden;
+  margin-top: -140px;
+  margin-right: -70px;
+}
+
 header .img-container {
   border: 5px solid #808080;
   border-right: 0;
   display: block;
-  margin-top: -140px;
-  margin-right: -70px;
+
   border-radius: 300px 0px 0px 300px;
   padding: 250px 300px;
   background-color: #d9d9d9;
+  animation: displace-right linear;
+  animation-timeline: view();
+  animation-range: exit;
 }
 
 .img-container-mobile {
@@ -222,7 +241,7 @@ header .img-container {
 
 @media (max-width: 992px) {
   .nav-container {
-    transform: translateY(-213px);
+    transform: translateY(-216px);
   }
 
   .hide-bar {

@@ -43,3 +43,15 @@ let headerElement = document.querySelector(".header");
 setTimeout(typeWriteHeading, 1000);
 setTimeout(displayHeaderText1, 500);
 setTimeout(displayHeaderText2, 200);
+
+function changeBackground() {
+  if (page.classList.contains("blackground")) {
+    page.classList.remove("blackground");
+  } else {
+    page.classList.add("blackground");
+  }
+}
+
+let page = document.querySelector("body");
+
+setTimeout(changeBackground, 10);
