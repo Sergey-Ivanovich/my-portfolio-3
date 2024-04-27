@@ -85,8 +85,8 @@ section.blackground {
 .cool-display {
   background: linear-gradient(45deg, #000000, #00ff2f, #00ffb3, #0011cf);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: change-gradient 5s infinite both;
+  background-clip: text;
+  animation: change-gradient 10s infinite both;
   background-size: 600% 600%;
   opacity: 1;
 }
@@ -359,8 +359,11 @@ main h2.stick {
     font-size: 20px;
   }
 
-  main .job-description {
+  .black-background {
     padding-left: 20px;
+  }
+
+  main .job-description {
     font-size: 30px;
   }
 }
