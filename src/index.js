@@ -96,3 +96,14 @@ function roleWrite() {
 
 let roleElement = document.querySelector("#job-role");
 setInterval(detectScroll, 100);
+
+// close warning \/
+
+function closeWarning() {
+  warningTab.classList.add("sling-right");
+}
+
+let warningTab = document.querySelector("#browser-compatibility-warning");
+let closeWarningTabButton = document.querySelector("#close-warning");
+
+closeWarningTabButton.addEventListener("click", closeWarning);
