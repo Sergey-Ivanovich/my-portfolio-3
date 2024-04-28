@@ -44,6 +44,9 @@
 }
 
 @keyframes turn-black {
+  from {
+    background-color: white;
+  }
   to {
     background-color: black;
   }
@@ -60,7 +63,7 @@
 }
 
 @keyframes fade-text {
-  20% {
+  10% {
     background-image: transparent;
     color: transparent;
   }
@@ -112,9 +115,10 @@ section.blackground {
   background-color: black;
   color: rgb(60, 255, 0);
   font-size: 100px;
-  height: 1000px;
-  animation: turn-black linear both;
-  animation-timeline: scroll();
+  height: 2500px;
+  animation: turn-black linear reverse both;
+  animation-timeline: view();
+  animation-range: 2000px contain;
 }
 
 nav {
@@ -338,7 +342,7 @@ main .job-subheading {
 }
 
 .main-intro {
-  height: 1000px;
+  height: 2000px;
   animation: fade-text linear both;
   animation-timeline: view();
   animation-range: exit;
