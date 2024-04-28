@@ -60,21 +60,32 @@ setTimeout(changeBackground, 1);*/
 
 let typewrited = false;
 
-function descWrite() {
-  typewrited = true;
-  new Typewriter("#type-writer-main-top", {
-    strings: "What do I do?",
+function moreDescWrite() {
+  new Typewriter("#type-writer-main-desc", {
+    strings: "My Websites are",
     autoStart: true,
     delay: 50,
+    cursor: null,
   });
 }
 
+function descWrite() {
+  typewrited = true;
+  new Typewriter("#type-writer-main-top", {
+    strings: "I Build Websites",
+    autoStart: true,
+    delay: 50,
+    cursor: null,
+  });
+  setTimeout(moreDescWrite, 1000);
+}
+
 function detectScroll() {
-  if (window.scrollY > 300 && typewrited === false) {
+  if (window.scrollY > 600 && typewrited === false) {
     descWrite();
   }
 
-  if (window.scrollY > 600) {
+  if (window.scrollY > 200) {
     roleWrite();
   }
 }
