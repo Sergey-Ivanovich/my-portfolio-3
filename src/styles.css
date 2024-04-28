@@ -74,6 +74,16 @@
   }
 }
 
+@keyframes float-up {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-900px);
+  }
+}
+
 html {
   overflow-x: hidden;
   overscroll-behavior: none;
@@ -342,7 +352,7 @@ main .job-subheading {
 }
 
 .main-intro {
-  height: 2000px;
+  height: 1500px;
   animation: fade-text linear both;
   animation-timeline: view();
   animation-range: exit;
@@ -378,7 +388,7 @@ main h2.stick {
   }
 
   header {
-    padding: 120px 0px 0px;
+    padding: 20px 0px 0px;
     display: block;
     text-align: center;
   }
@@ -395,11 +405,30 @@ main h2.stick {
     font-size: 20px;
   }
 
+  header .greeting {
+    animation: float-up linear both;
+    animation-timeline: view();
+    animation-range: exit;
+  }
+
+  header hr {
+    opacity: 1;
+    color: black;
+    background-color: black;
+    height: 1px;
+    border: 1px solid black;
+    margin: 0px;
+  }
+
   .black-background {
     padding-left: 20px;
   }
 
   main .job-description {
     font-size: 30px;
+  }
+
+  main h2 {
+    font-size: 40px;
   }
 }

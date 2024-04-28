@@ -62,7 +62,7 @@ let typewrited = false;
 
 function moreDescWrite() {
   new Typewriter("#type-writer-main-desc", {
-    strings: "My Websites are",
+    strings: "My Websites are: ",
     autoStart: true,
     delay: 50,
     cursor: null,
@@ -85,7 +85,7 @@ function detectScroll() {
     descWrite();
   }
 
-  if (window.scrollY > 200) {
+  if (window.scrollY > 300) {
     roleWrite();
   }
 }
