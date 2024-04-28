@@ -72,7 +72,7 @@ function moreDescWrite() {
 function descWrite() {
   typewrited = true;
   new Typewriter("#type-writer-main-top", {
-    strings: "I Build Websites",
+    strings: "I Build Websites.",
     autoStart: true,
     delay: 50,
     cursor: null,
